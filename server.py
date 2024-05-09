@@ -1,12 +1,15 @@
 from flask import Flask, request
 import os
-import boto3
+import boto3 
 
 app = Flask(__name__)
 
-AWS_ACCESS_KEY_ID = os.environ['aws_access_key_id'],
-AWS_SECRET_ACCESS_KEY = os.environ['aws_secret_access_key'],
+AWS_ACCESS_KEY_ID = os.environ['aws_access_key_id']
 
+AWS_SECRET_ACCESS_KEY = os.environ['aws_secret_access_key']
+
+print("aws ", AWS_ACCESS_KEY_ID) # imprime  el numero de telefono
+print("aws 2 ", AWS_SECRET_ACCESS_KEY) # imprime el numero de telefono
 ## Codigo para enviar mensajes de texto
 @app.route('/', methods=['GET']) # define la ruta de la api
 def home(): # define la funcion que se ejecutara al llamar a la ruta
