@@ -84,7 +84,7 @@ def email():
     return response
 
     ## Plantilla PQRS
-    response = ses.send_templated_email(
+    response = ses.send_templated_email( 
     Source='nombre_remitente@example.com',
     Destination={
         'ToAddresses': [
